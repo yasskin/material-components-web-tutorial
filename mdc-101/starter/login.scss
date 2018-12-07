@@ -18,6 +18,15 @@
   display: block;
   width: 300px;
   margin: 20px auto;
+  
+  light theme
+  &:not(.mdc-text-field--invalid) {
+    @include mdc-text-field-label-color(on-primary);
+  }
+  &.mdc-text-field--focused:not(.mdc-text-field--invalid)  {
+    @include mdc-text-field-label-color(on-primary);
+  }
+
 }
 
 .button-container {
@@ -29,4 +38,16 @@
 
 .button-container button {
   margin: 3px;
+}
+
+.shrine-login {
+  background-color: $mdc-theme-background;
+  color: $mdc-theme-on-background;
+}
+
+.cancel {
+  // dark theme
+  // @include mdc-button-ink-color(on-surface);
+  // light theme
+  @include mdc-button-ink-color(on-primary);
 }
